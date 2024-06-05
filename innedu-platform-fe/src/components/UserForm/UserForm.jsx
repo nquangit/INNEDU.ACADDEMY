@@ -352,7 +352,7 @@ export default function UserForm() {
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
                             }}
-                            className="slider"
+                            className="auth-slider"
                             initial={{ x: isLogin ? "-100%" : "-50%" }}
                             animate={{ x: isLogin ? "-5%" : "-100%" }}
                             transition={{ duration: 0.4 }}

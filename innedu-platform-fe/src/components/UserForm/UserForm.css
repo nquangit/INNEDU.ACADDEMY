@@ -72,7 +72,7 @@
     filter: blur(30px);
 }
 
-.wrapper .slider {
+.wrapper .auth-slider {
     position: absolute;
     right: 0;
     height: 100%;
