@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    flex-flow: column;
+    padding: 50px 400px;
+    background-color: var(--bluegray-900);
+    color: var(--surface-400);
+    justify-content: center;
+}
+
+.footer-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.org-info {
+    max-width: 1200px;
+}
+
+.customer-help {
+    padding-right: 100px;
+}
+
+.customer-help ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.customer-help ul li {
+    padding: 5px 0;
+}
+
+.customer-help ul li a {
+    color: var(--surface-400);
+    text-decoration: none;
+}
+
+.copy-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid var(--surface-400);
+    color: var(--surface-400);
+}
+
+.social-media a {
+    color: var(--surface-400);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 15px;
+    background-color: var(--orange-800);
+}

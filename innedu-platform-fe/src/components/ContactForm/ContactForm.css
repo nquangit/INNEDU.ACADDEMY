@@ -1,0 +1,161 @@
+.card.contact-form {
+    margin: 0 auto;
+    background-color: var(--surface-100);
+    border-radius: 8px;
+    z-index: 1;
+    padding: 10px 30px 30px 30px;
+}
+
+.card.contact-form::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, var(--primary-color) 100%);
+    transform: translate3d(0, 0, 0) scale(1.5);
+    filter: blur(20px);
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+.contact-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    row-gap: 30px;
+    padding: 20px;
+}
+
+@media (min-width: 600px) {
+    .contact-form .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contact-form .form-grid > * {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-grid .ant-picker {
+    width: 100%;
+}
+
+.contact-form .form-grid label {
+    margin-bottom: 5px;
+}
+
+.contact-form .form-grid .p-inputtext,
+.contact-form .form-grid .p-inputtextarea {
+    width: 100%;
+}
+
+/* Ensure the last element spans full width if the number of elements is odd */
+.contact-form .form-grid > :nth-last-child(1):nth-child(odd),
+.contact-form .form-grid > :nth-last-child(1):nth-child(odd) ~ * {
+    grid-column: span 2;
+}
+
+@media (max-width: 459px) {
+    .contact-form .form-grid > :nth-last-child(1):nth-child(odd),
+    .contact-form .form-grid > :nth-last-child(1):nth-child(odd) ~ * {
+        grid-column: span 1;
+    }
+}
+
+.ant-picker .ant-picker-input > input::placeholder {
+    color: var(--surface-500);
+}
+
+.submit-button {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(
+        to bottom,
+        var(--primary-color) 0%,
+        var(--green-300) 100%
+    );
+    color: var(--bluegray-900);
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+}
+
+.submit-button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+}
+
+.submit-button .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+
+.submit-button:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-button:hover svg {
+    transform: rotate(45deg);
+}
