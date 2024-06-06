@@ -17,9 +17,9 @@ export default function HomePageHeader() {
                     <span>EDU</span>
                 </h1>
                 <p>
-                    Innedu là nền tảng giáo dục trực tuyến dành cho học sinh
-                    tiểu học, giúp học sinh học tập mọi lúc, mọi nơi, mọi nền
-                    tảng.
+                    Innedu, được tạo thành từ 2 từ Innovation và Education,
+                    tượng trưng cho sự kết hợp giữa yếu tố đổi mới sáng tạo và
+                    triết lý nền tảng trong giáo dục.
                 </p>
             </div>
         </div>
