@@ -8,6 +8,9 @@ import TermsOfService from "./pages/TermsOfService";
 import Policy from "./pages/Policy";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
+import Courses from "./pages/Courses";
+
+import NotFound from "./pages/NotFound";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -22,11 +25,12 @@ function App() {
                     <Route path="termsOfService" element={<TermsOfService />} />
                     <Route path="policy" element={<Policy />} />
                     <Route path="contact" element={<Contact />} />
-                    <Route path="*" element={<Home />} />
+                    <Route path="courses" element={<Courses />} />
                 </Route>
-                <Route path="/auth" element={<EmptyLayout />} >
+                <Route path="/auth" element={<EmptyLayout />}>
                     <Route index element={<Auth />} />
                 </Route>
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </AnimatePresence>
     );

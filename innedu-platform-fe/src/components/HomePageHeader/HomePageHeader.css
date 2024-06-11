@@ -31,3 +31,56 @@
     font-size: 3.5rem;
     margin-bottom: 20px;
 }
+
+.btn-go-to-courses .icon-arrow {
+    transition: 0.5s;
+    margin-right: 25px;
+    margin-right: 0px;
+    transform: scale(0.6);
+}
+
+.icon-arrow {
+    width: 20px;
+    margin-left: 15px;
+    position: relative;
+    top: 6%;
+}
+/* SVG */
+#arrow-icon-one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.btn-go-to-courses #arrow-icon-three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-go-to-courses #arrow-icon-one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-go-to-courses #arrow-icon-two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+
+    50% {
+        fill: var(--color-background);
+    }
+
+    100% {
+        fill: white;
+    }
+}
