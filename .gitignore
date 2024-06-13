@@ -26,3 +26,5 @@ lerna-debug.log*
 Backend/venv/
 
 **/__pycache__/
+
+.env

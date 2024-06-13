@@ -1,5 +1,6 @@
 import "./App.css";
 
+import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout/MainLayout";
 import EmptyLayout from "./layouts/EmptyLayout/EmptyLayout";
@@ -16,6 +17,41 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
     const location = useLocation();
+
+    useEffect(() => {
+        // Vô hiệu hóa chuột phải
+        document.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+        });
+
+        // Vô hiệu hóa chức năng chọn văn bản
+        document.addEventListener("selectstart", (e) => {
+            e.preventDefault();
+        });
+
+        // Vô hiệu hóa các tổ hợp phím copy
+        const handleKeyDown = (e) => {
+            if (
+                (e.ctrlKey && e.key === "c") ||
+                (e.ctrlKey && e.key === "v") ||
+                (e.metaKey && e.key === "c") ||
+                (e.metaKey && e.key === "v")
+            ) {
+                e.preventDefault();
+            }
+        };
+        document.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            document.removeEventListener("contextmenu", (e) =>
+                e.preventDefault()
+            );
+            document.removeEventListener("selectstart", (e) =>
+                e.preventDefault()
+            );
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, []);
 
     return (
         <AnimatePresence>

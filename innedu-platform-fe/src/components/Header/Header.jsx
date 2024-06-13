@@ -107,7 +107,7 @@ export default function Header() {
                         </button>
 
                         <li className="nav-item">
-                            <NavLink to="/prices">Prices</NavLink>
+                            <NavLink to="/courses">Course</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink to="/about">About</NavLink>

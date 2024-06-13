@@ -25,7 +25,7 @@ export default function CourseSide() {
             ],
         },
         {
-            label: "Tiểu học",
+            label: "K12",
             icon: "pi pi-book",
             items: [
                 {
@@ -35,21 +35,11 @@ export default function CourseSide() {
             ],
         },
         {
-            label: "THCS",
+            label: "Microsoft Academy",
             icon: "pi pi-desktop",
             items: [
                 {
-                    label: "Dự án",
-                    icon: "pi pi-cloud-upload",
-                },
-            ],
-        },
-        {
-            label: "THPT",
-            icon: "pi pi-graduation-cap",
-            items: [
-                {
-                    label: "Dự án",
+                    label: "Khoá học",
                     icon: "pi pi-cloud-upload",
                 },
             ],

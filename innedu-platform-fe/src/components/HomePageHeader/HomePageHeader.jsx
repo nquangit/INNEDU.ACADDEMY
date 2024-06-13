@@ -2,6 +2,8 @@ import blackboard from "../../assets/blackboard.svg";
 import "./HomePageHeader.css";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import LazyLoad from "react-lazyload";
+import { Skeleton } from "primereact/skeleton";
 
 const ShowCourseButtonBefore = styled.div`
     content: "";
@@ -52,7 +54,19 @@ export default function HomePageHeader() {
     const navigate = useNavigate();
     return (
         <div className="home-page-header">
-            <img src={blackboard} alt="blackboard" width="60%" />
+            <LazyLoad
+                style={{
+                    display: "flex",
+                }}
+                placeholder={<Skeleton width="60%" height="auto"></Skeleton>}
+            >
+                <img
+                    style={{ margin: "0 auto" }}
+                    src={blackboard}
+                    alt="blackboard"
+                    width="60%"
+                />
+            </LazyLoad>
             <div className="board-content">
                 <h1 className="title">
                     <span
